@@ -141,32 +141,32 @@ def print_fixed_rectangle():
 
 def print_pyramid(x=0, y=0, z=0, length=5):
     print_triangle([x, y, z], [0.0, 0.0],
-                  [x, y + length, z], [0.0, 1.0],
-                  [x + length, y + length, z], [1.0, 1.0])
+                   [x, y + length, z], [0.0, 1.0],
+                   [x + length, y + length, z], [1.0, 1.0])
 
     print_triangle([x, y, z], [0.0, 0.0],
-                  [x + length, y + length, z], [1.0, 1.0],
-                  [x + length, y, z], [1.0, 0.0])
+                   [x + length, y + length, z], [1.0, 1.0],
+                   [x + length, y, z], [1.0, 0.0])
 
     if is_wall_one_visible:
         print_triangle([x, y, z], [0.0, 0.0],
-                      [x + length, y, z], [1.0, 0.0],
-                      [x + length / 2, y + length / 2, length / 2], [0.5, 0.5])
+                       [x + length, y, z], [1.0, 0.0],
+                       [x + length / 2, y + length / 2, length / 2], [0.5, 0.5])
 
     if is_wall_two_visible:
         print_triangle([x + length, y, z], [1.0, 0.0],
-                      [x + length, y + length, z], [1.0, 1.0],
-                      [x + length / 2, y + length / 2, length / 2], [0.5, 0.5])
+                       [x + length, y + length, z], [1.0, 1.0],
+                       [x + length / 2, y + length / 2, length / 2], [0.5, 0.5])
 
     if is_wall_three_visible:
         print_triangle([x + length, y + length, z], [1.0, 1.0],
-                      [x, y + length, z], [0.0, 1.0],
-                      [x + length / 2, y + length / 2, length / 2], [0.5, 0.5])
+                       [x, y + length, z], [0.0, 1.0],
+                       [x + length / 2, y + length / 2, length / 2], [0.5, 0.5])
 
     if is_wall_four_visible:
         print_triangle([x, y, 0.0], [0.0, 0.0],
-                      [x + length / 2, y + length / 2, length / 2], [0.5, 0.5],
-                      [x, y + length, z], [0.0, 1.0])
+                       [x + length / 2, y + length / 2, length / 2], [0.5, 0.5],
+                       [x, y + length, z], [0.0, 1.0])
 
 
 def print_triangle(point_1, texture_point_1, point_2, texture_point_2, point_3, texture_point_3):
@@ -244,6 +244,7 @@ def mouse_button_callback(window, button, action, mods):
         left_mouse_button_pressed = 1
     else:
         left_mouse_button_pressed = 0
+
 
 def main():
     if not glfwInit():
